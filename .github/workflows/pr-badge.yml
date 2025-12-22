@@ -1,0 +1,44 @@
+name: Update Merged PR Badge
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  update-badge:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Count Merged PRs
+        id: count_prs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Fetch merged PRs count using GitHub CLI
+          count=$(gh pr list --state merged --json number --limit 1000 | jq length)
+          echo "Current merged PR count: $count"
+          echo "count=$count" >> $GITHUB_OUTPUT
+
+      - name: Update README with Badge
+        if: steps.count_prs.outputs.count >= 2
+        run: |
+          BADGE="![Bronze Contributor](https://img.shields.io/badge/Achievement-Bronze%20Contributor-cd7f32?style=for-the-badge&logo=github)"
+          
+          # Check if badge already exists to avoid duplicates
+          if ! grep -q "Bronze Contributor" README.md; then
+            echo -e "\n$BADGE" >> README.md
+            
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "docs: Award Bronze Contributor badge for merging 2+ PRs"
+            git push
+          else
+            echo "Badge already exists."
+          fi

@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+.header-index {
+  background-image: url("Images/mountain.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.header-hobby {
+  background-image: url("Images/soccer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+.header-Philippines {
+  background-image: url("Images/photographer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+}
+
+
+.header-title {
+  font-family: Poppins;
+  font-size: 20px;
+  line-height: 30px;
+  padding: 12px 40px;
+} 
+
+.header-title a {
+  color: inherit; 
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header-title a:hover {
+  color: #ded4d497;
+}
+
+.header-tagline-small {
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 0;
+}
+
+.header-tagline {
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 74px;
+  margin: 0;
+}
+
+.header-description {
+  color: #8287a4;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 27px;
+  margin: 14px 0;
+}
+
+.header-description-sub {
+  color: #ffffffa4;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 27px;
+  margin: 14px 0;
+}
+
+.header-content {
+  margin: 0 auto;
+  padding: 80px 0 280px;
+  width: 1440px;
+}
+
+.sortation {
+  padding: 32px 0;
+}
+
+.sortation.dark {
+  background-color: #f1f4fa;
+}
+
+.container {
+  margin: 0 auto;
+  width: 720px;
+}
+
+.title {
+  color: #161346;
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 42px;
+  margin-top: 42px;
+}
+
+.description-nav {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 35px;
+  margin: 32px 0;
+}
+
+
+.description {
+  color: #4c497b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.description-sub {
+  color: #4c497b;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 32px 0;
+}
+
+.cover {
+  border-radius: 24px;
+  width: 100%;
+  padding: 12px 0;
+  
+}
+
+.cover-table {
+  border-radius: 12px;
+}
+
+#career.sortation {
+  background-color: #161346;
+  color: #ffffff;
+  text-align: center;
+}
+
+#career .title {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  margin: 8px 0;
+}
+
+#career .description {
+  color: #8287a4;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 23px;
+  margin: 8px 0;
+}
+
+#footer-hobby.sortation {
+  background-color: rgba(61, 153, 92,0.8);
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+#footer-travel.sortation {
+  background-color: rgba(211, 73, 62,0.8);
+  color: #d9d9d9;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+a.button {
+  background: #413c91;
+  border-radius: 8px;
+  color: #ffffff; 
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  margin: 32px 0;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.button-h {
+  background: rgb(60, 179, 96);
+  border-radius: 8px;
+  color: #ffffff; 
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  margin: 32px 0;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.button-p {
+  background: rgb(189, 68, 59);
+  border-radius: 8px;
+  color: #ffffff; 
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23px;
+  margin: 32px 0;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background-color: #605bc8;
+}
+
+a.button-h:hover {
+  background-color: #67b17e;
+}
+
+a.button-p:hover {
+  background-color: #bd615b;
+}
+
+audio {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+a{
+  text-decoration: none;
+  color: #4c497b;
+}
+
+.table-I {
+  color: #000000;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 27px;
+  border-spacing: 30px;
+}
+
+span {
+  color: #dec055;;
+}
